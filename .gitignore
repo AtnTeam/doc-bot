@@ -1,0 +1,16 @@
+node_modules/
+admin/node_modules/
+admin/.next/
+.cursor/
+
+data/*.db
+data/*.db-wal
+data/*.db-shm
+
+.env
+.env.*
+
+docs/
+
+tests/__rag_docs__/
+tests/__route_docs__/

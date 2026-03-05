@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-950 text-gray-100;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+/* Custom checkbox */
+.checkbox-custom {
+  @apply relative w-5 h-5 shrink-0 rounded-md border-2 border-gray-600
+    bg-gray-800 cursor-pointer transition-all duration-200;
+}
+.checkbox-custom.checked {
+  @apply border-blue-500 bg-blue-500;
+}
+.checkbox-custom::after {
+  content: '';
+  @apply absolute inset-0 opacity-0 transition-opacity duration-150;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2.5-2.5a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3E%3C/svg%3E");
+  background-size: 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.checkbox-custom.checked::after {
+  @apply opacity-100;
+}
+
+/* Toggle switch */
+.toggle-switch {
+  @apply relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full
+    border-2 border-transparent bg-gray-700 transition-colors duration-200;
+}
+.toggle-switch.active {
+  @apply bg-blue-500;
+}
+.toggle-switch .toggle-dot {
+  @apply pointer-events-none inline-block h-5 w-5 rounded-full bg-white
+    shadow-lg ring-0 transition-transform duration-200 translate-x-0;
+}
+.toggle-switch.active .toggle-dot {
+  @apply translate-x-5;
+}
