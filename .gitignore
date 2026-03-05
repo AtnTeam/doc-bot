@@ -10,7 +10,7 @@ data/*.db-shm
 .env
 .env.*
 
-docs/
+/docs/
 
 tests/__rag_docs__/
 tests/__route_docs__/
